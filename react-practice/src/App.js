@@ -3,12 +3,25 @@ import React from 'react';
 
 class App extends React.Component
 {
+  constructor()
+    {
+      super()
+      
+        this.state =
+        {
+          st : "This is the default state"
+        }
+      
+    }
+
   render()
   { 
+    
     return(
       <div>
-          <h1>{this.props.text}</h1>
-          <h3> {this.props.cat} </h3>
+         <h1> HELLOO </h1> 
+         <h2>{this.state.st}</h2>
+         <h3>{this.props.text}</h3>
       </div>
         )
   }
@@ -36,5 +49,10 @@ export default App;
 //   cat : React.PropTypes.number
 // }
 
+//  <h1>{this.props.text}</h1>
+// <h3> {this.props.cat} </h3> used to access the props with name cat
+
+/// The basic difference between props and states are that props are the static data  values which can't be changed by the components and 
+/// whereas states are the dynamic data values which is meant to be changed and updated by the components
 
 
