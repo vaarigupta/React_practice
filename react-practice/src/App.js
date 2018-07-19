@@ -3,38 +3,40 @@ import React from 'react';
 
 class App extends React.Component
 {
-  constructor()
+    constructor()
     {
       super()
       
         this.state =
         {
-          st : "This is the default state"
+          txt : "This is the default state"
         }
       
     }
     update(e)
     {
-      this.setState({ st : e.target.value})
+      this.setState({ txt : e.target.value})
     }
     
-  render()
-  { 
-    
-    return(
-      <div>
-         <h1> HELLOO </h1> 
-         <input type="text" onChange={this.update.bind(this)}/>
-         <h2>{this.state.st}</h2>
-         
-      </div>
-        )
-  }
+   
+    render()
+    { 
+      
+      return(
+          <div>
+             <h1> HELLOO </h1> 
+            <Widget update={this.update.bind(this)} />
+             <h2>{this.state.txt}</h2>
+            
+             
+          </div>
+          )
+    }
 }
-App.defaultProps ={
-   text : "Hey Loki",
-   cat : 10
- }
+ const Widget = (pr)=>
+ <input type="text" onChange={pr.update}/> 
+
+
 
 
 export default App;
