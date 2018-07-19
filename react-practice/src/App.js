@@ -13,15 +13,20 @@ class App extends React.Component
         }
       
     }
-
+    update(e)
+    {
+      this.setState({ st : e.target.value})
+    }
+    
   render()
   { 
     
     return(
       <div>
          <h1> HELLOO </h1> 
+         <input type="text" onChange={this.update.bind(this)}/>
          <h2>{this.state.st}</h2>
-         <h3>{this.props.text}</h3>
+         
       </div>
         )
   }
