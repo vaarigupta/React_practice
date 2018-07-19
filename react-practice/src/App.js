@@ -27,11 +27,23 @@ class App extends React.Component
              <h1> HELLOO </h1> 
             <Widget update={this.update.bind(this)} />
              <h2>{this.state.txt}</h2>
+             <button>I <heart /> React </button>
             
              
           </div>
           )
     }
+}
+const button = (props)=> <button>{props.children}</button>
+class heart extends React.Component
+{
+  render()
+  {
+    return(
+      <span>love</span>
+
+      )
+  }
 }
  const Widget = (pr)=>
  <input type="text" onChange={pr.update}/> 
@@ -61,5 +73,5 @@ export default App;
 
 /// The basic difference between props and states are that props are the static data  values which can't be changed by the components and 
 /// whereas states are the dynamic data values which is meant to be changed and updated by the components
-
+//
 
